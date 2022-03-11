@@ -1,0 +1,27 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"targets":{
+					"node": true
+				}
+			}
+		]
+	],
+	"plugins": [
+		[
+			"module-resolver", {
+				"root": ["./src"],
+				"alias": {
+					"@config": "./src/config.js",
+					"@modules": "./src/modules",
+					"@lib": "./src/lib",
+					"@express": "./src/express",
+					"@routes": "./src/express/routes",
+					"@pubsub": "./src/lib/pubSub"
+				}
+			}
+		]
+	]
+}
